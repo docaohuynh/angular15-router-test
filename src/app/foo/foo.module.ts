@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { FooRoutingModule } from './foo-routing.module';
 
-
 @NgModule({
   declarations: [
   ],

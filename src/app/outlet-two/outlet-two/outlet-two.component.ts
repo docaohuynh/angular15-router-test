@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
   template: `<p>outlet-two works!</p>
   <a [routerLink]="['/', 'foo', { outlets: { info:null } }]">Goto Foo component </a>
   <br />
-  <a [routerLink]="['/','foo', { info: null }]">Goto Foo component </a>
+  <a [routerLink]="['/', {outlets: {primary: ['foo', 'bar', 'something'], info:null } }]"><strong>Goto Foo Some thing component THIS works </strong></a>
+  <br />
+  <a [routerLink]="['/', {outlets: {primary: ['foo'], info:null } }]"><strong>Goto Foo component THIS works </strong></a>
   <br />
   <button (click)="gotoFoo()">goto Foo component</button>
   <br />
