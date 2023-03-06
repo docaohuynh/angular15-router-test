@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   <br />
   <button (click)="gotoFoo()">goto Foo component</button>
   <br />
-  <a [relativeTo]="route.parent" [routerLink]="['/', 'foo', {outlets: {'info': null}}]">Goto Foo component </a>
+  <a [relativeTo]="route.parent" [routerLink]="['/', 'foo', {outlets: {'info': null}}]">Goto ActivatedRoute component </a>
   <br />
   <a [relativeTo]="route.parent" [routerLink]="['/', 'foo', {info: null}]">Goto Foo ActivatedRoute component </a>
   <br />`,
