@@ -1,11 +1,14 @@
 <p>outlet-one works!</p>
-<a [routerLink]="['/foo', { outlets: { info:null } }]">Goto Foo component </a>
+<a [routerLink]="['/','foo', { outlets: { info:null } }]">Goto Foo with / array component not working </a>
 <br />
-<a [routerLink]="['/foo', { info: null }]">Goto Foo component </a>
+<a [routerLink]="['/', { outlets: { info:null } }]">just worked to close outlet</a>
 <br />
-<button (click)="gotoFoo()">goto Foo component</button>
+<a [routerLink]="['/foo', { info: null }]">Goto Foo component not working </a>
 <br />
-<a [relativeTo]="route.parent" [routerLink]="['/foo', {outlets: {info: null}}]">Goto Foo ActivatedRoute component </a>
+<button (click)="gotoFoo()">goto Foo component not working</button>
 <br />
-<a [relativeTo]="route.parent" [routerLink]="['/foo', {info: null}]">Goto Foo ActivatedRoute component </a>
+<a [relativeTo]="route.parent" [routerLink]="['/foo', {outlets: {info: null}}]">Goto Foo ActivatedRoute component not
+    working</a>
+<br />
+<a [relativeTo]="route.parent" [routerLink]="['/foo', {info: null}]">Goto Foo ActivatedRoute component not working</a>
 <br />
