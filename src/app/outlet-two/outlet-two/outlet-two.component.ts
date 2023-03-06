@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./outlet-two.component.scss']
 })
 export class OutletTwoComponent {
-
+  constructor(private router: Router) { }
+  gotoFoo(): void {
+    this.router.navigate(['/foo', { outlets: { info: null } }]);
+  }
 }

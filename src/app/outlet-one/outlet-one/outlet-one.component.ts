@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -9,5 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./outlet-one.component.scss']
 })
 export class OutletOneComponent {
-
+  constructor(private router: Router) { }
+  gotoFoo(): void {
+    this.router.navigate(['/foo', { outlets: { info: null } }]);
+  }
 }

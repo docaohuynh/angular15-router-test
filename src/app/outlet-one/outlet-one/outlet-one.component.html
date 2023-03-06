@@ -1,2 +1,6 @@
 <p>outlet-one works!</p>
-<a [routerLink]="['/foo']">Goto Foo component </a>
+<a [routerLink]="['/foo', { outlets: { info:null } }]">Goto Foo component </a>
+<br />
+<a [routerLink]="['/foo', { info: null }]">Goto Foo component </a>
+<br />
+<button (click)="gotoFoo()">goto Foo component</button>
