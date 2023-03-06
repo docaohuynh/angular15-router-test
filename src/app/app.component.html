@@ -1,0 +1,8 @@
+<div style="padding: 30px;">
+  <h1>Router outlet test</h1>
+  <a [routerLink]="[{ outlets: { info: ['outlet-one'] } }]">Goto outlet One</a>
+  <br />
+  <a [routerLink]="[{ outlets: { info: ['outlet-two'] } }]">Goto outlet Two</a>
+  <router-outlet></router-outlet>
+  <router-outlet name="info"></router-outlet>
+</div>
